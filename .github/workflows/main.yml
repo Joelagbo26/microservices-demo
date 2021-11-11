@@ -12,5 +12,5 @@ jobs:
     - uses: azure/setup-kubectl@v1
     - name: kubectl deploy to cluster
       run: |
-        kubectl create namespace boutique-app --kubeconfig ${{ secrets.AKS_KUBECONFIG }}
+        kubectl --kubeconfig ${{ secrets.AKS_KUBECONFIG }} create namespace boutique-app 
         kubectl apply -f ./release/kubernetes-manifests.yaml -n boutique-app --kubeconfig ${{ secrets.AKS_KUBECONFIG }}
