@@ -13,4 +13,4 @@ jobs:
     - name: kubectl deploy to cluster
       run: |
         kubectl create namespace boutique-app
-        kubectl apply -f ./release/kubernetes-manifests.yaml -n boutique-app --kubeconfig 
+        kubectl apply -f ./release/kubernetes-manifests.yaml -n boutique-app --kubeconfig ${{ secrets.AKS_KUBECONFIG }}
