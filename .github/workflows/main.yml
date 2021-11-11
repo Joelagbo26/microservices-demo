@@ -12,4 +12,4 @@ jobs:
     - uses: azure/setup-kubectl@v1
     - name: kubectl deploy to cluster
       run: |
-        kubectl apply -f ./release/kubernetes-manifests.yaml -n boutique-app --kubeconfig ${{ secrets.AKS_KUBECONFIG }}
+        kubectl apply -f release/kubernetes-manifests.yaml -n boutique-app --kubeconfig ${{ secrets.AKS_KUBECONFIG }}
